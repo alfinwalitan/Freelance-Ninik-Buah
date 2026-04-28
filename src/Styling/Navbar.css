@@ -1,0 +1,108 @@
+.navbar-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 40px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 999;
+    background: var(--white-color);
+    box-sizing: border-box;
+    box-shadow: 2px 2px 5px var(--primary-color);
+}
+
+.navbar-logo h1 {
+    font-size: 36px;
+    color: var(--green-color);
+}
+
+.navbar-menus ul {
+    list-style-type: none;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 0;
+    margin: 0;
+}
+
+.navbar-menus a {
+    text-decoration: none;
+    font-weight: 500;
+    color: var(--primary-color);
+    transition: 0.3s ease-in-out;
+}
+
+.navbar-menus a:hover,
+.navbar-menus a.active {
+    color: var(--green-color);
+}
+
+.lang-menu-item {
+    display: flex;
+    align-items: center;
+}
+
+.lang-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    width: 100px;
+    padding: 6px 0;
+    border: 2px solid var(--primary-color);
+    border-radius: 10px;
+    color: var(--primary-color);
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+}
+
+.lang-list {
+    position: absolute;
+    top: calc(100% + 10px);
+    left: 0;
+    width: 100%;
+    background-color: var(--white-color);
+    border: 1px solid var(--white-color);
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    display: none;
+    flex-direction: column;
+    list-style: none;
+    padding: 5px 0;
+    z-index: 1000;
+}
+
+.lang-wrapper:hover .lang-list {
+    display: flex;
+}
+
+.lang-list:before {
+    content: '';
+    position: absolute;
+    top: -10px;
+    left: 0;
+    width: 100%;
+    height: 10px;
+    background: transparent;
+    z-index: 1;
+}
+
+.lang-list li {
+    list-style: none;
+    padding: 10px 0;
+    width: 100%;
+    text-align: center;
+    cursor: pointer;
+    color: var(--primary-color);
+    transition: 0.3s ease-in-out;
+    z-index: 1001;
+    pointer-events: auto;
+}
+
+.lang-list li:hover {
+    color: var(--green-color);
+    background-color: rgba(0, 0, 0, 0.05);
+}

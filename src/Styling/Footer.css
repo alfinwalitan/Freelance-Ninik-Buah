@@ -1,0 +1,135 @@
+.footer-details {
+    padding: 40px 100px;
+    background: var(--primary-color);
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 40px;
+}
+
+.footer-logo-title {
+    color: var(--green-color);
+    font-size: 40px;
+    font-weight: bold;
+    border-bottom: 3px solid var(--green-color);
+    display: inline;
+    margin: 0;
+    padding: 0;
+}
+
+.footer-logo-subtitle {
+    color: var(--green-color);
+    font-size: 14px;
+}
+
+.footer-links {
+    display: flex;
+    gap: 60px;
+    padding: 0;
+}
+
+.footer-links ul {
+    list-style-type: none;
+    font-size: 14px;
+    font-weight: normal;
+    color: var(--white-color);
+    margin: 0;
+    padding: 0;
+}
+
+.footer-location-detail {
+    margin-left: 0;
+    max-width: 300px;
+}
+
+.footer-location-detail li {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    line-height: 2;
+}
+
+.footer-location-detail i {
+    margin-top: 6px;
+    min-width: 16px;
+    text-align: center;
+}
+
+.footer-location-detail i,
+.footer-location-detail span {
+    cursor: pointer;
+}
+
+.footer-location-detail i:hover,
+.footer-location-detail span:hover {
+    color: var(--green-color);
+    transition: 0.3s ease-in-out;
+}
+
+.footer-links li {
+    color: var(--white-color);
+    font-size: 12px;
+    font-weight: 200;
+    line-height: 2;
+}
+
+.footer-links a {
+    text-decoration: none;
+    font-weight: 500;
+    color: var(--white-color);
+    transition: 0.3s ease-in-out;
+}
+
+.footer-links a:hover {
+    color: var(--yellow-color);
+}
+
+.footer-links i {
+    padding-right: 5px;
+}
+
+.footer-col h4 {
+    margin: 0 0 12px;
+    font-size: 24px;
+    color: var(--green-color);
+}
+
+.footer-col ul {
+    padding: 0;
+    margin: 0;
+}
+
+.footer-media-social {
+    margin-left: 0;
+    cursor: pointer;
+}
+
+.footer-media-social li {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    line-height: 2;
+}
+
+.footer-media-social i {
+    font-size: 15px;
+    transition: 0.3s ease-in-out;
+}
+
+.footer-media-social i:hover,
+.footer-media-social span:hover {
+    color: var(--green-color);
+    transition: 0.3s ease-in-out;
+}
+
+.footer-copyright {
+    background: var(--primary-color);
+    color: var(--white-color);
+    border-top: 3px solid var(--green-color);
+    text-align: center;
+    padding-bottom: 10px;
+    font-size: 12px;
+    font-weight: 500;
+    margin: 0 auto 5px;
+    cursor: pointer;
+}

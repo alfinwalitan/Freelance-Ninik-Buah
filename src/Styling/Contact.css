@@ -1,0 +1,121 @@
+.contact-section {
+    text-align: center;
+    margin: 40px 0;
+}
+
+.contact-section-title {
+    display: inline;
+    border-bottom: 2px solid var(--primary-color);
+    font-size: 36px;
+    color: var(--primary-color);
+}
+
+.contact-section-subtitle {
+    color: var(--secondary-color);
+    margin-bottom: 20px;
+    font-size: 15px;
+}
+
+.contact-desc {
+    padding: 20px 80px;
+}
+
+.contact-desc-detail {
+    display: flex;
+    gap: 40px;
+}
+
+.contact-desc-detail-left {
+    flex: 1;
+}
+
+.contact-desc-left p {
+    color: var(--primary-color);
+    font-weight: 500;
+    font-size: 24px;
+}
+
+.contact-desc-left span {
+    color: var(--primary-color);
+    font-weight: 400;
+    font-size: 18px;
+}
+
+.contact-desc-detail-right {
+    flex: 1;
+}
+
+.info-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    margin-bottom: 12px;
+}
+
+.info-item i {
+    color: var(--primary-color);
+    margin-top: 4px;
+    min-width: 16px;
+    text-align: center;
+}
+
+.contact-desc-detail-right form {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group label {
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--primary-color);
+    margin-bottom: 6px;
+}
+
+.form-group input,
+.form-group textarea {
+    padding: 10px 12px;
+    border: 1px solid var(--primary-color);
+    border-radius: 6px;
+    font-size: 14px;
+    outline: none;
+    color: var(--primary-color);
+}
+
+.form-group textarea {
+    min-height: 120px;
+    resize: vertical;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    border-color: var(--primary-color);
+}
+
+.contact-submit-button {
+    margin-top: 10px;
+    padding: 12px;
+    border: none;
+    background: var(--primary-color);
+    color: var(--green-color);
+    font-size: 18px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+}
+
+.contact-submit-button:hover {
+    background: var(--green-color);
+    color: var(--primary-color)
+}
+
+.map-container {
+    margin-top: 20px;
+    border-radius: 10px;
+    overflow: hidden;
+}

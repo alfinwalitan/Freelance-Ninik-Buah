@@ -1,0 +1,35 @@
+.new-arrival-section {
+    text-align: center;
+    margin: 40px 0;
+}
+
+.new-arrival-title {
+    display: inline;
+    border-bottom: 2px solid var(--primary-color);
+    font-size: 36px;
+    color: var(--primary-color);
+}
+
+.new-arrival-subtitle {
+    color: var(--secondary-color);
+    margin-bottom: 20px;
+    font-size: 15px;
+}
+
+.new-arrival-card-section {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.new-arrival-card {
+    width: 350px;
+    max-width: 100%;
+    text-align: center;
+    transition: 0.3s ease-in-out;
+}
+
+.new-arrival-card:hover {
+    transform: scale(1.05);
+}

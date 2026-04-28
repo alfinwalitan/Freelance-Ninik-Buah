@@ -1,0 +1,48 @@
+.our-service-section {
+    text-align: center;
+    margin: 40px 0;
+}
+
+.our-service-title {
+    display: inline;
+    border-bottom: 2px solid var(--primary-color);
+    font-size: 36px;
+    color: var(--primary-color);
+}
+
+.our-service-subtitle {
+    color: var(--secondary-color);
+    margin-bottom: 20px;
+    font-size: 15px;
+}
+
+.service-card {
+    width: 150px;
+    margin-bottom: 20px;
+    text-align: center;
+    animation: float 3s ease-in-out infinite;
+    transition: transform 0.3s ease-in-out;
+}
+
+.service-card img {
+    width: 100%;
+    height: auto;
+}
+
+.service-desc {
+    color: var(--primary-color);
+    cursor: pointer;
+}
+
+/* Animation */
+@keyframes float {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-15px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
