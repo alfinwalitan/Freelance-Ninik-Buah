@@ -16,7 +16,7 @@ function App() {
       <Banner />
       <Arrival />
       <Service />
-      <Product />
+      <Product limit={7} showViewMore={true} />
       <News />
       <Blog />
       <Contact />

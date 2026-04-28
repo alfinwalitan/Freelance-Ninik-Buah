@@ -16,17 +16,32 @@
     font-size: 15px;
 }
 
+.service-card-section {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 20px;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 40px 40px;
+}
+
 .service-card {
-    width: 150px;
-    margin-bottom: 20px;
     text-align: center;
     animation: float 3s ease-in-out infinite;
     transition: transform 0.3s ease-in-out;
 }
 
 .service-card img {
-    width: 100%;
-    height: auto;
+    width: 150px;
+    height: 150px;
+    object-fit: contain;
+}
+
+.our-service-name {
+    color: var(--primary-color);
+    font-size: 18px;
+    margin-top: 10px;
+    font-weight: 600;
 }
 
 .service-desc {

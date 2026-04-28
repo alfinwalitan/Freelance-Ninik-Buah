@@ -1,6 +1,9 @@
 // Import CSS
 import '../Styling/Service.css';
 
+// Import Data
+import Services from '../Data/Service';
+
 function Service() {
     return (
             <>
@@ -16,12 +19,14 @@ function Service() {
                 </div>
 
                 <div className='service-card-section'>
-                    <div className='service-card'>
-                        <img src="" alt="" />
+                {Services.map((service, index) => (
+                    <div className='service-card' key={index}>
+                        <img src={service.img} alt={service.name} />
                         <h3 className='our-service-name'>
-
+                            {service.name}
                         </h3>
                     </div>
+                ))}
                 </div>
             </>
         )

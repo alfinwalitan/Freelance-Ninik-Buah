@@ -1,4 +1,4 @@
-// IMPORT CSS
+// Import CSS
 import '../Styling/Footer.css';
 
 function Footer() {

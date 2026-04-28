@@ -2,12 +2,12 @@
 import '../Styling/Banner.css';
 
 // Import Banner Image
-import BannerImg from '../Assets/banner.jpeg';
+import BannerImg from '../Assets/Banner/banner.jpeg';
 
 function Banner() {
     return (
         <div className='banner-section'>
-            <img src={BannerImg} alt='Banner Image' />
+            <img src={BannerImg} alt='Banner Logo' />
             <div className='banner-text'>
                 <h3 className='banner-text-category'>Buah Organik</h3>
                 <h1 className='banner-text-desc'>

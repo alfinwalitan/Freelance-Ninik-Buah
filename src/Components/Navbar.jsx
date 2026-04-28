@@ -24,10 +24,10 @@ function Navbar() {
 
             <div className='navbar-menus'>
                 <ul>
-                    <li><a href="/">Beranda</a></li>
-                    <li><a href="/">Produk</a></li>
-                    <li><a href="/">Blog</a></li>
-                    <li><a href="/">Kontak</a></li>
+                    <li><a href='/'>Beranda</a></li>
+                    <li><a href='/'>Produk</a></li>
+                    <li><a href='/'>Blog</a></li>
+                    <li><a href='/'>Kontak</a></li>
                 </ul>
             </div>
 
