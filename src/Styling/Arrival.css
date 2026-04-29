@@ -36,3 +36,60 @@
 .new-arrival-card:hover {
     transform: scale(1.05);
 }
+
+/* Responsive */
+@media (max-width: 1024px) {
+    .new-arrival-title {
+        font-size: 30px;
+    }
+
+    .new-arrival-card {
+        width: 280px;
+    }
+}
+
+@media (max-width: 768px) {
+    .new-arrival-section {
+        margin: 30px 0;
+    }
+
+    .new-arrival-title {
+        font-size: 26px;
+    }
+
+    .new-arrival-subtitle {
+        font-size: 13px;
+    }
+
+    .new-arrival-card-section {
+        gap: 16px;
+        padding: 0 16px;
+    }
+
+    .new-arrival-card {
+        width: calc(50% - 8px);
+    }
+}
+
+@media (max-width: 480px) {
+    .new-arrival-section {
+        margin: 24px 0;
+    }
+
+    .new-arrival-title {
+        font-size: 22px;
+    }
+
+    .new-arrival-subtitle {
+        font-size: 12px;
+    }
+
+    .new-arrival-card-section {
+        gap: 12px;
+        padding: 0 12px;
+    }
+
+    .new-arrival-card {
+        width: 100%;
+    }
+}

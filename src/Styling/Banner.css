@@ -63,3 +63,69 @@
 .banner-btn:hover i {
     transform: translateX(6px);
 }
+
+/* Responsive */
+@media (max-width: 1024px) {
+    .banner-text h1 {
+        font-size: 56px;
+    }
+
+    .banner-text h3 {
+        font-size: 20px;
+    }
+
+    .banner-btn {
+        font-size: 20px;
+        padding: 13px 18px;
+    }
+}
+
+@media (max-width: 768px) {
+    .banner-section img {
+        height: 70vh;
+    }
+
+    .banner-text {
+        left: 5%;
+        right: 5%;
+    }
+
+    .banner-text h1 {
+        font-size: 42px;
+    }
+
+    .banner-text h3 {
+        font-size: 17px;
+    }
+
+    .banner-btn {
+        font-size: 17px;
+        padding: 11px 16px;
+        margin-top: 8px;
+    }
+}
+
+@media (max-width: 480px) {
+    .banner-section img {
+        height: 60vh;
+    }
+
+    .banner-text {
+        left: 5%;
+        right: 5%;
+    }
+
+    .banner-text h1 {
+        font-size: 30px;
+    }
+
+    .banner-text h3 {
+        font-size: 14px;
+    }
+
+    .banner-btn {
+        font-size: 14px;
+        padding: 9px 14px;
+        margin-top: 10px;
+    }
+}
