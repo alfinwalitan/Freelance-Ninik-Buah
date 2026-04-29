@@ -9,24 +9,31 @@ import Card from '../Components/Card';
 // Import Data
 import Products from '../Data/Product';
 
+// Import Modal
+import ModalCard from '../Components/Modal/ModalCard';
+
 function Product({ limit, showViewMore = false }) {
+
+    // State for Products and View More
     const [products] = useState(Products);
     const [showAll, setShowAll] = useState(false);
+    
+    // State for Modal
+    const [selectedProduct, setSelectedProduct] = useState(null);
 
-    // Search Handler
+    // State for Search
     const [searchInput, setSearchInput] = useState('');
     const [selectedName, setSelectedName] = useState('');
     const [suggestions, setSuggestions] = useState([]);
 
+    // Function Search
     const handleSearchChange = (e) => {
         const value = e.target.value;
         setSearchInput(value);
-
         if (value.trim() === '') {
             setSuggestions([]);
             return;
         }
-
         const filtered = products.filter(p =>
             p.name.toLowerCase().includes(value.toLowerCase())
         );
@@ -49,13 +56,16 @@ function Product({ limit, showViewMore = false }) {
 
     return (
         <>
+            {selectedProduct && (
+                <ModalCard
+                    product={selectedProduct}
+                    onClose={() => setSelectedProduct(null)}
+                />
+            )}
+
             <div className='our-product-section'>
-                <h1 className='our-product-title'>
-                    Produk Kami
-                </h1>
-                <p className='our-product-subtitle'>
-                    Kesegaran Harian untuk Anda!
-                </p>
+                <h1 className='our-product-title'>Produk Kami</h1>
+                <p className='our-product-subtitle'>Kesegaran Harian untuk Anda!</p>
             </div>
 
             <div className='search-bar-container'>
@@ -67,36 +77,27 @@ function Product({ limit, showViewMore = false }) {
                     className='search-bar'
                     autoComplete='off'
                 />
-
                 {searchInput && (
-                    <button
-                        className='clear-btn'
-                        onClick={() => {
-                            setSearchInput('');
-                            setSuggestions([]);
-                            setSelectedName('');
-                        }}
-                    >
+                    <button className='clear-btn' onClick={() => {
+                        setSearchInput('');
+                        setSuggestions([]);
+                        setSelectedName('');
+                    }}>
                         <i className='fa-solid fa-xmark'></i>
                     </button>
                 )}
 
-                {suggestions.length > 0 ? (
+                {suggestions.length > 0 && (
                     <ul className='suggestions-list'>
                         {suggestions.map(item => (
-                            <li key={item.id} onClick={() => handleSelectSuggestion(item.name)}>
+                            <li
+                                key={item.id}
+                                onClick={() => handleSelectSuggestion(item.name)}
+                            >
                                 {item.name}
                             </li>
                         ))}
                     </ul>
-                ) : (
-                    searchInput && !products.some(p => p.name === searchInput) && (
-                        <ul className='suggestions-list'>
-                            <li className='no-search-results'>
-                                Tidak Ada Hasil untuk '<strong>{searchInput}</strong>'
-                            </li>
-                        </ul>
-                    )
                 )}
             </div>
 
@@ -107,7 +108,11 @@ function Product({ limit, showViewMore = false }) {
                         name={item.name}
                         price={item.price}
                     >
-                        <div className='card-image'>
+                        <div
+                            className='card-image'
+                            style={{ cursor: 'pointer' }}
+                            onClick={() => setSelectedProduct(item)}
+                        >
                             <img src={item.img} alt={item.name} />
                         </div>
                     </Card>
@@ -115,10 +120,7 @@ function Product({ limit, showViewMore = false }) {
 
                 {showViewMore && !showAll && (
                     <div className='view-more-wrapper'>
-                        <button
-                            className='view-more-btn'
-                            onClick={() => setShowAll(true)}
-                        >
+                        <button className='view-more-btn' onClick={() => setShowAll(true)}>
                             Lebih Banyak <i className='fas fa-arrow-right'></i>
                         </button>
                     </div>
