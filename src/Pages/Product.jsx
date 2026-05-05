@@ -1,5 +1,8 @@
 import { useState } from 'react';
 
+// Import Link
+import { Link } from 'react-router-dom';
+
 // Import CSS
 import '../Styling/Product.css';
 
@@ -11,6 +14,10 @@ import Products from '../Data/Product';
 
 // Import Modal
 import ModalCard from '../Components/Modal/ModalCard';
+
+// Import Motion
+import MotionCard from '../Components/Motion/MotionCard';
+import MotionWrapper from '../Components/Motion/MotionWrapper';
 
 function Product({ limit, showViewMore = false }) {
 
@@ -63,66 +70,72 @@ function Product({ limit, showViewMore = false }) {
                 />
             )}
 
-            <div className='our-product-section'>
-                <h1 className='title-h1'>Produk Kami</h1>
-                <p className='subtitle-p'>Kesegaran Harian untuk Anda!</p>
-            </div>
+            <MotionWrapper delay={0.1}>
+                <div className='our-product-section'>
+                    <h1 className='title-h1'>Produk Kami</h1>
+                    <p className='subtitle-p'>Kesegaran Harian untuk Anda!</p>
+                </div>
+            </MotionWrapper>
+            
+            <MotionWrapper delay={0.1}>
+                <div className='search-bar-container'>
+                    <input
+                        type='text'
+                        placeholder='Mencari Buah...'
+                        value={searchInput}
+                        onChange={handleSearchChange}
+                        className='search-bar'
+                        autoComplete='off'
+                    />
+                    {searchInput && (
+                        <button className='clear-btn' onClick={() => {
+                            setSearchInput('');
+                            setSuggestions([]);
+                            setSelectedName('');
+                        }}>
+                            <i className='fa-solid fa-xmark'></i>
+                        </button>
+                    )}
 
-            <div className='search-bar-container'>
-                <input
-                    type='text'
-                    placeholder='Mencari Buah...'
-                    value={searchInput}
-                    onChange={handleSearchChange}
-                    className='search-bar'
-                    autoComplete='off'
-                />
-                {searchInput && (
-                    <button className='clear-btn' onClick={() => {
-                        setSearchInput('');
-                        setSuggestions([]);
-                        setSelectedName('');
-                    }}>
-                        <i className='fa-solid fa-xmark'></i>
-                    </button>
-                )}
-
-                {suggestions.length > 0 && (
-                    <ul className='suggestions-list'>
-                        {suggestions.map(item => (
-                            <li
-                                key={item.id}
-                                onClick={() => handleSelectSuggestion(item.name)}
-                            >
-                                {item.name}
-                            </li>
-                        ))}
-                    </ul>
-                )}
-            </div>
+                    {suggestions.length > 0 && (
+                        <ul className='suggestions-list'>
+                            {suggestions.map(item => (
+                                <li
+                                    key={item.id}
+                                    onClick={() => handleSelectSuggestion(item.name)}
+                                >
+                                    {item.name}
+                                </li>
+                            ))}
+                        </ul>
+                    )}
+                </div>
+            </MotionWrapper>
 
             <div className='our-product-card-section'>
                 {visibleProducts.map(item => (
-                    <Card
-                        key={item.id}
-                        name={item.name}
-                        price={item.price}
-                    >
-                        <div
-                            className='card-image'
-                            style={{ cursor: 'pointer' }}
-                            onClick={() => setSelectedProduct(item)}
+                    <MotionCard key={item.id}>
+                        <Card
+                            key={item.id}
+                            name={item.name}
+                            price={item.price}
                         >
-                            <img src={item.img} alt={item.name} />
-                        </div>
-                    </Card>
+                            <div
+                                className='card-image'
+                                style={{ cursor: 'pointer' }}
+                                onClick={() => setSelectedProduct(item)}
+                            >
+                                <img src={item.img} alt={item.name} />
+                            </div>
+                        </Card>
+                    </MotionCard>
                 ))}
 
                 {showViewMore && !showAll && (
                     <div className='view-more-wrapper'>
-                        <button className='view-more-btn' onClick={() => setShowAll(true)}>
+                        <Link to='/product/' className='view-more-btn' onClick={() => setShowAll(true)}>
                             Lebih Banyak <i className='fas fa-arrow-right'></i>
-                        </button>
+                        </Link>
                     </div>
                 )}
             </div>

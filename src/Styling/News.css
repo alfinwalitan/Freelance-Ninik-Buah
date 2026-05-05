@@ -60,7 +60,7 @@
     padding: 0 36px;
     margin: 0;
     border: none;
-    background-color: var(--red-color);
+    background-color: var(--green-color);
     color: var(--white-color);
     font-size: 16px;
     font-weight: 500;
@@ -72,8 +72,7 @@
 }
 
 .news-button:hover {
-    background: var(--green-color);
-    color: var(--white-color);
+    background: var(--red-color);
 }
 
 /* Responsive */
