@@ -6,11 +6,11 @@ function Contact() {
         <>
             <div className='contact-section'>
                 <div className='contact-header-text'>
-                    <h1 className='contact-section-title'>
+                    <h1 className='title-h1'>
                         Kontak Kami
                     </h1>
 
-                    <p className='contact-section-subtitle'>
+                    <p className='subtitle-p'>
                         Ayo Hubungi Kami!
                     </p>
                 </div>

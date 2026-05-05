@@ -107,6 +107,10 @@
     display: none;
 }
 
+.navbar-menus ul li a.active {
+    color: var(--yellow-color);
+}
+
 .hamburger {
     display: none;
     flex-direction: column;

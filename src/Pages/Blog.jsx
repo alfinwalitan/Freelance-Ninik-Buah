@@ -1,21 +1,26 @@
 // Import CSS
 import '../Styling/Blog.css';
 
+// Import Navigate
+import { useNavigate } from 'react-router-dom';
+
 // Import Data
 import Blogs from '../Data/Blog';
 
 function Blog() {
+    const navigate = useNavigate();
+
     return (
         <>
             <div className='blog-section'>
-                <h1 className='blog-section-title'>Blog Terbaru</h1>
-                <p className='blog-section-subtitle'>Ikuti Berita dan Informasi Terbaru!</p>
+                <h1 className='title-h1'>Blog Terbaru</h1>
+                <p className='subtitle-p'>Ikuti Berita dan Informasi Terbaru!</p>
             </div>
 
             <div className='blog-card-container'>
                 {Blogs.map((blog) => (
                     <div className='blog-card' key={blog.id}>
-                        <div className='blog-card-img'>
+                        <div className='blog-card-img' key={blog.id} onClick={() => navigate(`/blog/${blog.id}`)}>
                             <span className='blog-card-category'>{blog.category}</span>
                             <img src={blog.img} alt={blog.title} />
                             <div className='blog-card-img-overlay'></div>
@@ -37,7 +42,10 @@ function Blog() {
                             <h3 className='blog-card-title'>{blog.title}</h3>
                             <p className='blog-card-desc'>{blog.desc}</p>
 
-                            <button className='blog-read-more'>
+                            <button 
+                                className='blog-read-more'
+                                onClick={() => navigate(`/blog/${blog.id}`)}
+                            >
                                 Baca Selengkapnya <i className='fas fa-arrow-right'></i>
                             </button>
                         </div>

@@ -1,5 +1,8 @@
 import { useState } from 'react';
 
+// Import Link
+import { NavLink } from 'react-router-dom';
+
 // Import CSS
 import '../Styling/Navbar.css';
 
@@ -41,10 +44,26 @@ function Navbar() {
             <div className={`navbar-content ${isMenuOpen ? 'open' : ''}`}>
                 <div className='navbar-menus'>
                     <ul>
-                        <li><a href='/' onClick={() => setIsMenuOpen(false)}>Beranda</a></li>
-                        <li><a href='/' onClick={() => setIsMenuOpen(false)}>Produk</a></li>
-                        <li><a href='/' onClick={() => setIsMenuOpen(false)}>Blog</a></li>
-                        <li><a href='/' onClick={() => setIsMenuOpen(false)}>Kontak</a></li>
+                        <li>
+                            <NavLink to='/' end className={({ isActive }) => isActive ? 'active' : ''} onClick={() => setIsMenuOpen(false)}>
+                                Beranda
+                            </NavLink>
+                        </li>
+                        <li>
+                            <NavLink to='/product' className={({ isActive }) => isActive ? 'active' : ''} onClick={() => setIsMenuOpen(false)}>
+                                Produk
+                            </NavLink>
+                        </li>
+                        <li>
+                            <NavLink to='/blog' className={({ isActive }) => isActive ? 'active' : ''} onClick={() => setIsMenuOpen(false)}>
+                                Blog
+                            </NavLink>
+                        </li>
+                        <li>
+                            <NavLink to='/contact' className={({ isActive }) => isActive ? 'active' : ''} onClick={() => setIsMenuOpen(false)}>
+                                Kontak
+                            </NavLink>
+                        </li>
                     </ul>
                 </div>
 

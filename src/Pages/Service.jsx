@@ -9,10 +9,10 @@ function Service() {
             <>
                 <div className='our-service-section'>
                     <div className='our-service-header'>
-                        <h1 className='our-service-title'>
+                        <h1 className='title-h1'>
                             Pelayanan Kami
                         </h1>
-                        <p className='our-service-subtitle'>
+                        <p className='subtitle-p'>
                             Mitra Layanan Terpercaya Anda!
                         </p>
                     </div>

@@ -17,3 +17,12 @@ body {
     --yellow-color: #f1c40f;
     --red-color: #dc143c;
 }
+
+/* Text */
+.title-h1 {
+    font-size: 36px;
+}
+
+.subtitle-p {
+    font-size: 15px;
+}

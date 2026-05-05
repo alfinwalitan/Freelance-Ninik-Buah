@@ -3,17 +3,15 @@
     margin: 40px 0;
 }
 
-.our-service-title {
+.title-h1 {
     display: inline;
     border-bottom: 2px solid var(--primary-color);
-    font-size: 36px;
     color: var(--primary-color);
 }
 
-.our-service-subtitle {
+.subtitle-p {
     color: var(--secondary-color);
     margin-bottom: 20px;
-    font-size: 15px;
 }
 
 .service-card-section {

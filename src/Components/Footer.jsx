@@ -1,6 +1,9 @@
 // Import CSS
 import '../Styling/Footer.css';
 
+// Import Link 
+import { Link } from 'react-router-dom';
+
 function Footer() {
     return(
         <div className='footer-header'>
@@ -14,11 +17,10 @@ function Footer() {
                     <div className='footer-col'>
                         <h4>Tautan</h4>
                         <ul>
-                            <li><a href='/'>Beranda</a></li>
-                            <li><a href='/'>Produk</a></li>
-                            <li><a href='/'>Blog</a></li>
-                            <li><a href='/'>Kontak</a></li>
-                            
+                            <li><Link to='/'>Beranda</Link></li>
+                            <li><Link to='/product'>Produk</Link></li>
+                            <li><Link to='/blog'>Blog</Link></li>
+                            <li><Link to='/contact'>Kontak</Link></li>
                         </ul>
                     </div>
 

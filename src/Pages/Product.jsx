@@ -64,8 +64,8 @@ function Product({ limit, showViewMore = false }) {
             )}
 
             <div className='our-product-section'>
-                <h1 className='our-product-title'>Produk Kami</h1>
-                <p className='our-product-subtitle'>Kesegaran Harian untuk Anda!</p>
+                <h1 className='title-h1'>Produk Kami</h1>
+                <p className='subtitle-p'>Kesegaran Harian untuk Anda!</p>
             </div>
 
             <div className='search-bar-container'>

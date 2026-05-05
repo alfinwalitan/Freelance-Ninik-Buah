@@ -1,19 +1,18 @@
 .blog-section {
     text-align: center;
     margin: 40px 0;
+    padding: 0;
 }
 
 .blog-section-title {
     display: inline;
     border-bottom: 2px solid var(--primary-color);
-    font-size: 36px;
     color: var(--primary-color);
 }
 
 .blog-section-subtitle {
     color: var(--secondary-color);
     margin-bottom: 20px;
-    font-size: 15px;
 }
 
 .blog-card-container {
@@ -77,7 +76,7 @@
     font-size: 12px;
     font-weight: 700;
     padding: 6px 14px;
-    border-radius: 20px;
+    border-radius: 5px;
     z-index: 1;
     letter-spacing: 0.5px;
 }
@@ -193,11 +192,11 @@
     }
 
     .blog-card {
-        width: 100%;
+        width: 80%;
     }
 
     .blog-card-img {
-        height: 220px;
+        height: 280px;
     }
 
     .blog-card-content {

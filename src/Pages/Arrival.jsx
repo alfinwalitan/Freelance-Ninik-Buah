@@ -26,8 +26,8 @@ function Arrival() {
 
             <div className='new-arrival-section'>
                 <div className='new-arrival-header'>
-                    <h1 className='new-arrival-title'>Produk Terbaru</h1>
-                    <p className='new-arrival-subtitle'>Jelajahi Buah-Buahan Terbaru Kami!</p>
+                    <h1 className='title-h1'>Produk Terbaru</h1>
+                    <p className='subtitle-p'>Jelajahi Buah-Buahan Terbaru Kami!</p>
                 </div>
             </div>
 
@@ -38,7 +38,7 @@ function Arrival() {
                         name={arrival.name}
                         price={arrival.price}
                     >
-                        <div 
+                        <div
                             className='card-image'
                             style={{ cursor: 'pointer' }}
                             onClick={() => setSelectedProduct(arrival)}
